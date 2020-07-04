@@ -6,4 +6,4 @@ def home(request):
     return render(request,template_name='common/index.html')
 
 def test(request):
-    return render(request,template_name="test.html")
+    return render(request,template_name="layouts/base.html")
