@@ -139,6 +139,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
+from django.conf.locale.ru import formats as ru_format
+
+ru_format.DATETIME_FORMAT = "d.m.Y H:i:s"
 
 LANGUAGE_CODE = 'ru-ru'
 
