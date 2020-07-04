@@ -17,8 +17,9 @@ from django.contrib import admin
 from django.urls import path
 import common.views
 #from common import views
-
+app_name = 'common'
 
 urlpatterns = [
     path('',common.views.home, name="home"),
+    path('test/',common.views.test, name ="test"),
 ]

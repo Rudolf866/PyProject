@@ -18,7 +18,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 try:
     with open(os.path.join(BASE_DIR, 'conf', 'secrets.json')) as handle:
         SECRETS = json.load(handle)
@@ -26,9 +25,6 @@ except IOError:
     SECRETS = {
         'secret_key': 'a'
     }
-
-
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
