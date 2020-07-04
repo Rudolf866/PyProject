@@ -143,6 +143,8 @@ from django.conf.locale.ru import formats as ru_format
 
 ru_format.DATETIME_FORMAT = "d.m.Y H:i:s"
 
+I18N_PREFIX_DEFAULT_LANGUAGE = False
+
 LANGUAGE_CODE = 'ru-ru'
 
 TIME_ZONE = 'Europe/Moscow'
