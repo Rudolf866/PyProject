@@ -52,6 +52,7 @@ INSTALLED_APPS = [
 
     # Сторонние утилиты
     'admin_reorder',
+    'easy_thumbnails',
 
     # пользовательские приложения
     'common',
@@ -154,6 +155,23 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+#----------------------------
+# Настройки easy-thumbnails |
+#----------------------------
+
+THUMBNAIL_BASEDIR = 'thumbs'
+THUMBNAIL_NAMER = 'easy_thumbnails.namers.hashed'
+THUMBNAIL_ALIASES = {
+    '': {
+        'large': {'size': (1920, 1080), 'crop': False},
+        'middle': {'size': (800, 600), 'crop': True},
+        'small': {'size': (320, 280), 'crop': True},
+    },
+}
+
+
 
 
 # Static files (CSS, JavaScript, Images)
