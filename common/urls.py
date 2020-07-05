@@ -20,6 +20,6 @@ import common.views
 app_name = 'common'
 
 urlpatterns = [
-    path('',common.views.home, name="home"),
-    path('test/',common.views.test, name ="test"),
+    path('test/',common.views.home, name="home"),
+    path('',common.views.test, name ="test"),
 ]

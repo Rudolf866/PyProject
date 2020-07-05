@@ -32,6 +32,7 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     path('',include('common.urls',namespace="common")),
+    path('blog/',include('blog.urls',namespace = "blog")),
 
     prefix_default_language=settings.I18N_PREFIX_DEFAULT_LANGUAGE
 )
