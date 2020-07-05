@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     # Сторонние утилиты
     'admin_reorder',
     'easy_thumbnails',
+    'mptt',
 
     # пользовательские приложения
     'common',
@@ -156,6 +157,13 @@ USE_L10N = True
 
 USE_TZ = True
 
+
+
+#-----------------------------------
+# Иерархическое дерево django-mptt |
+#----------------------------------
+#default is 10 pixels
+MPTT_ADMIN_LEVEL_INDENT = 30
 
 #----------------------------
 # Настройки easy-thumbnails |
