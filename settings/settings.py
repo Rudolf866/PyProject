@@ -51,12 +51,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Сторонние утилиты
-    'admin_reorder',
+
     'easy_thumbnails',
     'mptt',
 
     # пользовательские приложения
     'common',
+
+
 
 ]
 
@@ -68,7 +70,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'admin_reorder.middleware.ModelAdminReorder',
+    #'admin_reorder.middleware.ModelAdminReorder',
 ]
 
 ROOT_URLCONF = 'settings.urls'
@@ -95,16 +97,6 @@ WSGI_APPLICATION = 'settings.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'pyproject',
-#         'USER':'python',
-#         'HOST':'localhost',
-#         'PASSWORD':'qaz1986qaz',
-#         'PORT':'3306',
-#     }
-# }
 
 
 DATABASES = {
@@ -119,7 +111,10 @@ DATABASES = {
 }
 
 
-
+#-----------------------
+# Настройки авторизации |
+#------------------------
+# Включение проверки пароля
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
@@ -137,6 +132,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+
 
 
 # Internationalization
@@ -182,6 +180,11 @@ THUMBNAIL_ALIASES = {
 
 
 
+
+
+#------------------------------------
+# Настройки статичных и медиа файлов |
+#------------------------------------
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
@@ -190,13 +193,3 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-#----------------------------------
-# Настройки панели администратора |
-#----------------------------------
-
-ADMIN_REORDER = (
-    # Навигационное меню
-#     {'app': 'menus', 'models': ('menus.Menu', )},
-# 'redirects.Redirect', )},
-
-)
